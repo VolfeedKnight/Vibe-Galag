@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Galaga</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-page">
+      <section class="game-shell" aria-label="Mini Galaga game">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">HTML / CSS / JavaScript</p>
+            <h1>Mini Galaga</h1>
+          </div>
+          <div class="stats" aria-label="game stats">
+            <div class="stat">
+              <span>Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div class="stat">
+              <span>Best</span>
+              <strong id="bestScore">0</strong>
+            </div>
+            <div class="stat">
+              <span>Lives</span>
+              <strong id="lives">3</strong>
+            </div>
+            <div class="stat">
+              <span>Wave</span>
+              <strong id="wave">1</strong>
+            </div>
+            <div class="stat">
+              <span>Combo</span>
+              <strong id="combo">x1</strong>
+            </div>
+            <div class="stat">
+              <span>Power</span>
+              <strong id="power">None</strong>
+            </div>
+          </div>
+        </header>
+
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="840" height="920" aria-label="Galaga canvas game"></canvas>
+          <div id="overlay" class="overlay">
+            <div class="overlay-panel">
+              <p class="state-label" id="stateLabel">Ready</p>
+              <h2 id="stateTitle">Mini Galaga</h2>
+              <p id="stateText">Move with arrows or A/D. Shoot with Space. Mobile controls are below.</p>
+              <button id="startButton" type="button">Start</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="touch-controls" aria-label="touch controls">
+          <button type="button" class="touch-btn" data-action="left">Left</button>
+          <button type="button" class="touch-btn" data-action="shoot">Fire</button>
+          <button type="button" class="touch-btn" data-action="right">Right</button>
+          <button type="button" class="touch-btn secondary" data-action="pause">Pause</button>
+          <button type="button" class="touch-btn secondary" data-action="restart">Restart</button>
+        </div>
+
+        <footer class="controls">
+          <span>Move: ← → / A D</span>
+          <span>Shoot: Space</span>
+          <span>Pause: P</span>
+          <span>Restart: Enter</span>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
